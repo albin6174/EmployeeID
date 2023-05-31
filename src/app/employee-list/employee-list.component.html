@@ -1,0 +1,32 @@
+<div class="border p-3 shadow mt-3">
+    <table class="table table-striped caption-top p-2">
+        <caption>List Of Users</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                <th>Action</th>
+                
+            </tr>
+        </thead>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.name}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.department}}</td>
+            <td>{{emp.phone}}</td>
+            <td>{{emp.salary}}</td>
+
+            <td>
+                <button class="btn btn-outline-success" {click}="redirectToEmployeedetail(emp.id)">View</button>
+                <button class="btn btn-outline-info" [routerLink]="['/employee-edit',emp.id]">Edit</button>
+                <button class="btn btn-outline-danger" {click}="deleteEmployee(emp.id)">Delete</button>
+        </td>
+
+            
+        </tr>
+    </table>
+
+</div>

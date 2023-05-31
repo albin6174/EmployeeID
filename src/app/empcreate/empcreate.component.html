@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 boreder rounded p-5 shadow mt-5">
+            <form action="" [formGroup]="empForm" (ngSubmit)="saveEmp()">
+                <h1>New Employee Details!</h1>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter employee name" formControlName="name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter email address" formControlName="email">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter department name" formControlName="department">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter phone number" formControlName="phone">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter salary details" formControlName="salary">
+                </div>
+                <div class="mb-3">
+                    <input type="Submit" class="btn btn-info form-control" >
+                </div>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
